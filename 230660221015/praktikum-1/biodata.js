@@ -1,11 +1,11 @@
 // biodata.js
 
 // 1. Deklarasikan variabel menggunakan const dan let
-const namaLengkap = "Dina Salwa Mannatu"; // Ganti dengan nama lengkapmu
+const namaLengkap = "Febry Nursyahbriyana"; // Ganti dengan nama lengkapmu
 const tempatLahir = "Sumedang";
-let tanggalLahir = "21 September 2005"; 
-let umur = 20; 
-let statusMahasiswa = true; 
+let tanggalLahir = "16 Juli 2004";
+let umur = 21;
+let statusMahasiswa = true;
 
 // Variabel baru
 const jurusan = "Sistem Informasi";
@@ -13,20 +13,19 @@ const universitas = "Universitas Sebelas April";
 
 // 2. Gunakan string methods untuk memanipulasi data
 const namaBesar = namaLengkap.toUpperCase();
-const asalKota = tempatLahir.slice(0, 8); 
 const namaKecil = namaLengkap.toLowerCase();
-const namaTrim = "   " + namaLengkap + "   "; // contoh trim
-const namaRapi = namaTrim.trim();
-const kotaGanti = tempatLahir.replace("Sumedang"); // replace contoh
+const namaTrim = namaLengkap.trim();
+const namaGanti = namaLengkap.replace("Febry", "Muhammad"); // contoh penggunaan replace
+const asalKota = tempatLahir.slice(0, 5); // Mengambil 5 karakter pertama
 
-// 3. Gabungkan String (Concatenation vs Template Literals)
-const jalan = "Link. Cipameungpeuk";
+// 3. Gabungkan string alamat
+const jalan = "Jl. Raya Sumedang - Cibeureum";
 const kota = "Sumedang";
 
-// Menggunakan operator +
-const alamatConcat = jalan + ", " + kota;
+// Menggabungkan dengan operator +
+const alamatPlus = jalan + ", " + kota;
 
-// Menggunakan Template Literals
+// Menggabungkan dengan Template Literals
 const alamatTemplate = `${jalan}, ${kota}`;
 
 // 4. Siapkan output menggunakan Template Literals
@@ -34,19 +33,19 @@ const biodata = `
 =========================================
           BIODATA MAHASISWA
 =========================================
-Nama Lengkap      : ${namaBesar}
-Nama (lowercase)  : ${namaKecil}
-Nama (trim)       : ${namaRapi}
+Nama Lengkap      : ${namaLengkap}
+Nama Uppercase    : ${namaBesar}
+Nama Lowercase    : ${namaKecil}
+Nama Trim         : "${namaTrim}"
+Nama Replace      : ${namaGanti}
 Tempat Lahir      : ${tempatLahir}
-Tempat Lahir Ganti: ${kotaGanti}
 Tanggal Lahir     : ${tanggalLahir}
 Umur              : ${umur} tahun
 Jurusan           : ${jurusan}
 Universitas       : ${universitas}
 Asal Kota (Slice) : ${asalKota}
-Status Aktif      : ${statusMahasiswa}
-
-Alamat (Concat)   : ${alamatConcat}
+Status Aktif      : ${statusMahasiswa ? "Aktif" : "Tidak Aktif"}
+Alamat (+)        : ${alamatPlus}
 Alamat (Template) : ${alamatTemplate}
 =========================================
 `;

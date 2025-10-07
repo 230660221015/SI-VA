@@ -1,18 +1,12 @@
 // register.js
 
 // --- INPUT DATA ---
-const firstName = "Brilian";
-const lastName = "Pratama";
-const nik = "3204011205990003";
+const firstName = "Febry";
+const lastName = "Nursyahbriyana";
+const nik = "3211221607040001";
 const position = "Backend Developer";
 let grossSalary = 9500000;
 let isPermanent = true;
-
-
-// --- VALIDASI DATA ---
-// Validasi panjang NIK (harus 16 digit)
-console.log("Panjang NIK Valid:", nik.length === 16);
-
 
 // --- PROSES DATA ---
 
@@ -30,11 +24,7 @@ const employeeID = (initialFirstName + initialLastName + lastNikDigits).toUpperC
 const formattedSalary = `Rp ${grossSalary.toLocaleString('id-ID')}`; // Hasil: "Rp 9.500.000"
 
 // 5. Ubah boolean menjadi teks yang deskriptif
-const statusText = isPermanent ? "Karyawan Tetap" : "Karyawan Kontrak"; // Hasil: "Karyawan Tetap"
-
-// 6. Generate email perusahaan
-const emailPerusahaan = (firstName.toLowerCase() + "." + lastName.toLowerCase() + "@ciptasolusi.digital");
-
+const statusText = isPermanent ? "Karyawan Tetap" : "Karyawan Kontrak";
 
 // --- OUTPUT ---
 const summary = `
@@ -49,7 +39,6 @@ Berikut adalah ringkasan data Anda:
   Nama Lengkap      : ${(firstName + " " + lastName).toUpperCase()}
   Posisi            : ${position}
   Employee ID       : ${employeeID}
-  Email Perusahaan  : ${emailPerusahaan}
   
   Gaji Pokok (Gross): ${formattedSalary}
   Status            : ${statusText}
